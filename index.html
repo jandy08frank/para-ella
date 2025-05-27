@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Te Amo Michi</title>
+  <title>Te LOVEO Michi</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
   <style>
     body { margin: 0; overflow: hidden; background-color: black; }
@@ -41,9 +41,9 @@ function draw() {
     let p = particles[i];
     let base = basePositions[i];
     let d = dist(mouseX, mouseY, p.pos.x, p.pos.y);
-    if (d < 25) { 
+    if (d < 50) { 
       let angle = atan2(p.pos.y - mouseY, p.pos.x - mouseX);
-      let force = (25 - d) * 0.05; 
+      let force = (50 - d) * 0.05; 
       let push = p5.Vector.fromAngle(angle).mult(force);
       p.vel.add(push);
     }
